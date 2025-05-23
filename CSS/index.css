@@ -1,0 +1,228 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- Variables de Color Inspiradas en la Imagen --- */
+:root {
+    --color-beige-claro: #CECABE;   /* Beige para fondos y acentos */
+    --color-verde-oliva: #7E885D;   /* Verde principal para banners y fondos de sección */
+    --color-texto-oscuro: #3A3B3C;  /* Para la mayoría del texto y títulos */
+    --color-texto-claro: #F0EFEA;   /* Para texto sobre fondos oscuros */
+    --color-fondo-pagina: #FBFBF8;  /* Fondo general de la página, un blanco cálido */
+
+    /* Fuentes (puedes cambiarlas por las que prefieras, ej. de Google Fonts) */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Monserrat', sans-serif; /* Una fuente con serifa puede quedar bien con el estilo natural */
+}
+
+/* --- Reset Básico y Estilos Globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-pagina);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    color: var(--color-texto-oscuro);
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-top: 10px; /* Un poco de espacio arriba del título de sección */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--color-verde-oliva);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 900px; /* Limita el ancho del contenido principal */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: var(--color-beige-claro); /* Fondo del logo */
+    padding: 30px 20px;
+    border-bottom: 5px solid var(--color-verde-oliva); /* Simula el banner verde debajo */
+}
+
+.site-header h1 {
+    color: var(--color-texto-oscuro); /* Color del texto "Humedrio" */
+    margin-bottom: 0;
+}
+
+
+/* --- Galería de Fotos (Slideshow) --- */
+.galeria-section h2 {
+    /* No necesita estilo especial adicional por ahora */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Ajusta según el tamaño deseado */
+    margin: auto;
+    background-color: var(--color-beige-claro); /* Un fondo sutil para el slideshow */
+    padding: 10px;
+    border: 1px solid var(--color-verde-oliva);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ocultar las imágenes por defecto */
+.slide {
+    display: none;
+}
+.slide img {
+    width: 100%;
+    vertical-align: middle; /* Para alinear bien la imagen */
+}
+
+/* Botones de Anterior y Siguiente */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(126, 136, 93, 0.7); /* Verde oliva semi-transparente */
+}
+
+.next {
+    right: 10px; /* Ajustado para estar dentro del padding del contenedor */
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 10px; /* Ajustado para estar dentro del padding del contenedor */
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--color-verde-oliva); /* Verde oliva sólido al pasar el ratón */
+}
+
+/* Puntos indicadores */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--color-beige-claro); /* Puntos inactivos */
+    border: 1px solid var(--color-verde-oliva);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: var(--color-verde-oliva); /* Punto activo o al pasar el ratón */
+}
+
+/* Animación de fundido (fade) */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* --- Sección de Información --- */
+.info-section {
+    background-color: var(--color-beige-claro); /* Similar al fondo del nombre en la imagen */
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px; /* Espacio respecto a la galería */
+}
+.info-section h2 {
+    /* No necesita estilo especial adicional por ahora */
+}
+.info-section p {
+    color: var(--color-texto-oscuro);
+}
+
+/* --- Sección de Reportaje --- */
+.reportaje-section {
+    background-color: var(--color-verde-oliva); /* Similar al fondo "Descripción" en la imagen */
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.reportaje-section h2 {
+    color: var(--color-texto-claro); /* Texto claro sobre fondo oscuro */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Fondo negro mientras carga el video */
+    border-radius: 4px;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: var(--color-verde-oliva);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    margin-bottom: 0.5em;
+}
+
+.site-footer a {
+    color: var(--color-beige-claro); /* Un

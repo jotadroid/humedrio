@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Humedrio</title>
+    <meta name="description" content="Proyecto Humedrio: Galería de fotos, información y reportajes sobre este vital ecosistema.">
+    <!-- Enlace a tu futura hoja de estilos CSS -->
+    <link rel="stylesheet" href="/CSS/index.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Humedrio</h1>
+        <!-- Podrías añadir un subtítulo o un logo pequeño aquí si quisieras -->
+    </header>
+
+    <main>
+        <section id="galeria-fotos" class="galeria-section">
+            <h2>Galería de Fotos</h2>
+            <div class="slideshow-container">
+                <!-- Las imágenes del slideshow irán aquí.
+                     Esto es una representación estructural.
+                     La funcionalidad de slideshow real se haría con JS. -->
+
+                <div class="slide fade">
+                    <img src="/assets/img/paisaje.jpg" alt="Paisaje de Humedrio 1">
+                    <!-- Podrías añadir un pie de foto opcional aquí -->
+                    <!-- <div class="caption">Amanecer en el humedal</div> -->
+                </div>
+
+                <div class="slide fade">
+                    <img src="/assets/img/fauna.jpg" alt="Fauna de Humedrio">
+                    <!-- <div class="caption">Ave local en su hábitat</div> -->
+                </div>
+
+                <div class="slide fade">
+                    <img src="/assets/img/basura.jpg" alt="Detalle de la flora de Humedrio">
+                    <!-- <div class="caption">Planta acuática característica</div> -->
+                </div>
+
+                <!-- Controles de Anterior/Siguiente (se mostrarían/ocultarían con JS) -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Puntos/círculos indicadores (se actualizarían con JS) -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <section id="info" class="info-section">
+            <h2>Información</h2>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </article>
+        </section>
+
+        <section id="reportaje" class="reportaje-section">
+            <h2>Reportaje</h2>
+            <div class="video-wrapper">
+                <!-- Opción 1: Video incrustado de YouTube/Vimeo (Recomendado) -->
+                <!-- Reemplaza el 'src' con el enlace de tu video -->
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=IvBIfqErPxWPnts-"
+                    title="Reportaje sobre Humedrio"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+                <!-- Opción 2: Si tienes el video alojado tú mismo (menos recomendado para videos largos) -->
+                <!--
+                <video controls width="100%">
+                    <source src="videos/reportaje_humedrio.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Proyecto Humedrio. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en <a href="https://www.instagram.com/humedrio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- Enlace a tu futuro archivo JavaScript (necesario para el slideshow) -->
+    <script src="/JS/index.js"></script>
+    <script>
+        // Pequeño script para el año actual en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
