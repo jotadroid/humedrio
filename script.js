@@ -108,3 +108,24 @@ function autoShowSlides() {
 document.addEventListener('DOMContentLoaded', (event) => {
     showSlides(slideIndex); // Muestra el primer slide al cargar la página
 });
+
+function toggleMenu() {
+    const menu = document.getElementById("menu-links");
+    menu.classList.toggle("show");
+}
+
+// Cierra el menú si se hace clic en cualquier enlace
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("#menu-links a");
+    const menu = document.getElementById("menu-links");
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+            }
+        });
+    });
+});
+
+

@@ -15,11 +15,12 @@
 
     <!-- Submenú de navegación -->
     <nav class="sub-menu">
-        <ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰ Menú</div>
+        <ul id="menu-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
-            <li><a href="index.html#galeria-fotos">Galería</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="galeria_fotos.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
@@ -60,6 +61,8 @@
             Síguenos en <a href="https://www.instagram.com/humedrio/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </p>
     </footer>
+
+    <script src="script.js"></script>
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
