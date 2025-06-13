@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - Proyecto Humedrio</title>
+    <meta name="description" content="Conoce al equipo detrás del Proyecto Humedrio.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="logo.svg" alt="logo-humedrio" id="logo-humedrio">
+    </header>
+
+    <!-- Submenú de navegación -->
+    <nav class="sub-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
+            <li><a href="index.html#galeria-fotos">Galería</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info-section">
+            <h2>¿Quiénes Somos?</h2>
+            <article>
+                <p>
+                    <strong>Proyecto Humedrio</strong> es una iniciativa liderada por estudiantes y voluntarios comprometidos con la conservación de los humedales urbanos.
+                    Nuestro objetivo es crear conciencia sobre la importancia de estos ecosistemas, promover su cuidado y generar contenido educativo que inspire a otras
+                    comunidades a proteger la biodiversidad local.
+                </p>
+                <p>
+                    Este proyecto nació en el contexto de un trabajo académico, pero ha ido creciendo gracias a la motivación de sus participantes, el apoyo de vecinos,
+                    instituciones educativas y organizaciones ambientales. Nos dedicamos a documentar, investigar y difundir la riqueza natural de los humedales a través
+                    de reportajes, fotografías y campañas de limpieza.
+                </p>
+                <p>
+                    Creemos que la educación ambiental es clave para lograr un cambio sostenible. Por eso, nuestras actividades incluyen charlas, talleres, visitas guiadas
+                    y difusión en redes sociales.
+                </p>
+            </article>
+
+            <div class="equipo">
+                <h3>Equipo Humedrio</h3>
+                <ul>
+                    <li><strong>Fernanda Núñez</strong> – Coordinadora General y Producción</li>
+                    <li><strong>Nombre del Integrante</strong> – Fotografía y Documentación</li>
+                    <li><strong>Nombre del Integrante</strong> – Investigación y Apoyo Técnico</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Proyecto Humedrio. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en <a href="https://www.instagram.com/humedrio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
