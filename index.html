@@ -27,33 +27,24 @@
         <section id="galeria-fotos" class="galeria-section">
             <h2>Galería de Fotos</h2>
             <div class="slideshow-container">
-                <!-- Las imágenes del slideshow irán aquí.
-                     Esto es una representación estructural.
-                     La funcionalidad de slideshow real se haría con JS. -->
 
                 <div class="slide fade">
                     <img src="paisaje.jpg" alt="Paisaje Humedal">
-                    <!-- Podrías añadir un pie de foto opcional aquí -->
-                    <!-- <div class="caption">Amanecer en el humedal</div> -->
                 </div>
 
                 <div class="slide fade">
                     <img src="fauna.jpg" alt="Fauna Humedal">
-                    <!-- <div class="caption">Ave local en su hábitat</div> -->
                 </div>
 
                 <div class="slide fade">
                     <img src="basura.jpg" alt="Trabajando en el Humedal">
-                    <!-- <div class="caption">Planta acuática característica</div> -->
                 </div>
 
-                <!-- Controles de Anterior/Siguiente (se mostrarían/ocultarían con JS) -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
 
-            <!-- Puntos/círculos indicadores (se actualizarían con JS) -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -85,8 +76,6 @@
         <section id="reportaje" class="reportaje-section">
             <h2>Reportaje</h2>
             <div class="video-wrapper">
-                <!-- Opción 1: Video incrustado de YouTube/Vimeo (Recomendado) -->
-                <!-- Reemplaza el 'src' con el enlace de tu video -->
                 <iframe
                     width="560"
                     height="315"
@@ -96,14 +85,6 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
                 </iframe>
-
-                <!-- Opción 2: Si tienes el video alojado tú mismo (menos recomendado para videos largos) -->
-                <!--
-                <video controls width="100%">
-                    <source src="videos/reportaje_humedrio.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-                -->
             </div>
         </section>
     </main>
@@ -115,10 +96,8 @@
         </p>
     </footer>
 
-    <!-- Enlace a tu futuro archivo JavaScript (necesario para el slideshow) -->
     <script src="script.js"></script>
     <script>
-        // Pequeño script para el año actual en el footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 
